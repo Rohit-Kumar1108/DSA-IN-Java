@@ -12,7 +12,7 @@ public class implementation{
     public static class linkedList {
         Node head=null;
         Node tail=null;
-        void insertAtEnd(int data){
+        void insertAtEnd(int data){                           // Insert data at the end 
             Node temp = new Node(data);
             if(head==null){
                 head=temp;
@@ -22,7 +22,7 @@ public class implementation{
             tail=temp;
         }
 
-        void display(){
+        void display(){                                      // Display Linked list
             Node temp = head;
             while (temp!=null) {
                 System.out.print(temp.data+" ");
@@ -30,7 +30,7 @@ public class implementation{
             }
             System.out.println();
         }
-         int sizeOfLinkedList(){
+         int sizeOfLinkedList(){                             //Check size of linked list     
             int count=0;
             Node temp=head;
             while (temp!=null) {
@@ -40,7 +40,7 @@ public class implementation{
             return count;
          }
 
-         void insertAtBegning(int data){
+         void insertAtBegning(int data){                      // Insert elements in the linked list at begning
             Node temp=new Node(data);
             if (head==null) {
                insertAtEnd(data);
@@ -50,15 +50,15 @@ public class implementation{
             head=temp;
          }
 
-         int getAt(int val){
+         int getAt(int val){                                //get elements 
             Node temp = head;
             for(int i=0; i<val; i++){
                 temp=temp.next;
             }
           return temp.data;
          }
-
-        void insertAtIdx(int idx, int data){
+  
+        void insertAtIdx(int idx, int data){                             // insert elements at the given index
             Node temp =  new Node(data);
             Node t=head;
             if (idx==0) {
@@ -77,7 +77,7 @@ public class implementation{
 
         }
 
-        void deleteAtIndex(int idx){
+        void deleteAtIndex(int idx){                                 // delete node 
             Node temp = head;
             for(int i=0; i<=idx-1; i++){
                 temp = temp.next;
